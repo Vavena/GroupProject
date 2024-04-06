@@ -29,16 +29,16 @@ def window_2(name):
 
     lbl = Label(root, text= name )
     lbl.place(x=150, y=25)
-
-  def btn_click(choise):
+    
+def btn_click(choise):
     comp_choise = rdm.randint(1, 3)
 
     if choise == comp_choise:
-      lbl.configure(text="Ничья, тренируйтесь.")
+        lbl.configure(text="Ничья, тренируйтесь.")
     elif ( choise == 1 and comp_choise == 2) or (choise == 2 and comp_choise == 3) or (choise == 3 and comp_choise == 1):
-      lbl.configure(text="Вы победили!")
+        lbl.configure(text="Вы победили!")
     else:
-      lbl.configure(text="Вы проиграли...(")
+        lbl.configure(text="Вы проиграли...(")
     del comp_choise
 
 root.geometry("300x200+200+200")
