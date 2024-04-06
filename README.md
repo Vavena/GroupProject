@@ -45,3 +45,9 @@ root.geometry("300x200+200+200")
 root.title("Камень, ножницы, бумага")
 root.resizable(True, True)
 root.mainloop()
+
+![image](https://github.com/Vavena/GroupProject/assets/166173127/0b183dd1-1585-4b40-ae55-a95d77f0b8aa)
+![image](https://github.com/Vavena/GroupProject/assets/166173127/ed03e041-0c20-41a3-9330-a797fe70c370)
+![image](https://github.com/Vavena/GroupProject/assets/166173127/07ff0b79-30d1-43d5-97be-e554b1d797e0)
+
+
