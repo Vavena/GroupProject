@@ -1,3 +1,7 @@
+"""
+New
+"""
+
 from tkinter import *
 from tkinter import ttk
 import random as rdm
