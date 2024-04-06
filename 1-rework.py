@@ -30,19 +30,35 @@ def window_2(name):
 
   lbl = Label(root, text= name )
   lbl.place(x=150, y=25)
+  close = Button(root, text="Домой", command=root.destroy)
+  close.place(x=150, y=160, width=50, height=30)
+  pclbl = Label(root, text=("Компьютер выбрал:"))
+  pclbl.place(x=150, y=55)
+  pclbl1 = Label(root, text=(" "))
+  pclbl1.place(x=150, y=75)
 
+  def exit(y):
+    exit()
   def btn_click(choise):
-    comp_choise = rdm.randint(1, 3)
+    pclbl = Label(root, text=("Компьютер выбрал:"))
+    try: pclbl.configure(text = " ")
+    except: print("")
 
+    comp_choise = rdm.randint(1, 3)
+    choisedict = {1: "камень", 2: "ножницы", 3: " бумагу"}
     if choise == comp_choise:
       lbl.configure(text="Ничья, тренируйтесь.")
+      pclbl1.configure(text=choisedict.get(comp_choise))
     elif ( choise == 1 and comp_choise == 2) or (choise == 2 and comp_choise == 3) or (choise == 3 and comp_choise == 1):
       lbl.configure(text="Вы победили!")
+      pclbl1.configure(text=choisedict.get(comp_choise))
     else:
       lbl.configure(text="Вы проиграли...(")
+      pclbl1.configure(text=choisedict.get(comp_choise))
+
     del comp_choise
 
-root.geometry("300x200+200+200")
+root.geometry("400x200+200+200")
 root.title("Камень, ножницы, бумага")
-root.resizable(False, False)
+root.resizable(True, True)
 root.mainloop()
